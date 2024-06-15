@@ -20,6 +20,8 @@ export interface IUserProfile extends Document {
   readonly gender: Gender;
   readonly age: number; // in years
   readonly activityLevel: ActivityLevel;
+  readonly bmr: number
+  readonly tdee: number
 }
 
 const userProfileSchema = new Schema<IUserProfile>({
@@ -45,6 +47,14 @@ const userProfileSchema = new Schema<IUserProfile>({
     enum: Object.values(ActivityLevel),
     required: true,
   },
+  bmr: {
+      type: Number,
+      required: true
+  },
+  tdee: {
+      type: Number,
+      required:true
+  }
 });
 
 const isUserProfile = (doc: Document): doc is IUserProfile =>

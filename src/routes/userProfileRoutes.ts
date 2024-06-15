@@ -1,5 +1,5 @@
 import { Request, Response, Router } from "express";
-import UserProfile, { IUserProfile } from "../model/userProfile";
+import UserProfile from "../model/userProfile";
 import jwt, { JwtPayload } from "jsonwebtoken";
 
 const profileRouter = Router();
@@ -25,7 +25,7 @@ profileRouter.post("/new", async (req: Request, res: Response) => {
 
     console.log({ decodedToken, userId, token });
 
-    const { height, weight, gender, age, activityLevel } = req.body;
+    const { height, weight, gender, age, activityLevel, bmr, tdee } = req.body;
 
     const userProfile = new UserProfile({
       _id: userId,
@@ -34,6 +34,8 @@ profileRouter.post("/new", async (req: Request, res: Response) => {
       gender,
       age,
       activityLevel,
+      bmr, 
+      tdee,
     });
 
     // Save UserProfile to MongoDB
