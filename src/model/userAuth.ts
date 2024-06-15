@@ -1,12 +1,11 @@
 import { model, Schema, Document } from "mongoose";
-import bcrypt from "bcrypt";
 
-export interface IUser extends Document {
+export interface IUserAuth extends Document {
   readonly email: string;
   readonly password: string;
 }
 
-const userSchema = new Schema<IUser>({
+const userAuthSchema = new Schema<IUserAuth>({
   email: {
     type: String,
     required: true,
@@ -18,6 +17,6 @@ const userSchema = new Schema<IUser>({
   },
 });
 
-const User = model<IUser>("User", userSchema);
+const UserAuth = model<IUserAuth>("user-auth", userAuthSchema);
 
-export default User;
+export default UserAuth;
