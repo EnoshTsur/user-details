@@ -1,5 +1,14 @@
 import { model, Schema, Document, CallbackError } from "mongoose";
-import UserAuth from "./userauth";
+import UserAuth from "./userAuth";
+
+export type Status = "cut" | "bulk" | "maintenance";
+
+export interface MacronutrientTargets {
+  readonly protein: number;
+  readonly carbonhydrates: number;
+  readonly fats: number;
+  readonly calories: number;
+}
 
 export enum Gender {
   Male = "male",
@@ -20,9 +29,16 @@ export interface IUserProfile extends Document {
   readonly gender: Gender;
   readonly age: number; // in years
   readonly activityLevel: ActivityLevel;
-  readonly bmr: number
-  readonly tdee: number
+  readonly bmr: number;
+  readonly tdee: number;
+  readonly status: Status | undefined;
+  readonly macronutrients: MacronutrientTargets | undefined;
 }
+
+export type UserBasicInfo = Pick<
+  IUserProfile,
+  "height" | "weight" | "age" | "gender" | "activityLevel"
+>;
 
 const userProfileSchema = new Schema<IUserProfile>({
   height: {
@@ -48,13 +64,27 @@ const userProfileSchema = new Schema<IUserProfile>({
     required: true,
   },
   bmr: {
-      type: Number,
-      required: true
+    type: Number,
+    required: true,
   },
   tdee: {
-      type: Number,
-      required:true
-  }
+    type: Number,
+    required: true,
+  },
+  status: {
+    type: String,
+    enum: ["cut", "bulk", "maintenance"],
+    required: false,
+  },
+  macronutrients: {
+    type: {
+      protein: { type: Number, required: true },
+      carbonhydrates: { type: Number, required: true },
+      fats: { type: Number, required: true },
+      calories: { type: Number, required: true },
+    },
+    required: false,
+  },
 });
 
 const isUserProfile = (doc: Document): doc is IUserProfile =>

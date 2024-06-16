@@ -1,10 +1,15 @@
 import { Request, Response, Router } from "express";
-import UserAuth, { IUserAuth } from "../model/userauth";
+import UserAuth, { IUserAuth } from "../model/userAuth";
 import { hashPassword } from "../utils/hashPassword";
 import bcrypt from "bcrypt";
 import { generateToken } from "../utils/jwt";
+import { authMiddleware } from "./auth.middleware";
 
 const authRouter = Router();
+
+authRouter.get("/validateToken", authMiddleware, (_: Request, res: Response) => {
+  return res.status(200).json({ success: true })
+})
 
 authRouter.post("/register", async (req: Request, res: Response) => {
   const { email, password }: IUserAuth = req.body;

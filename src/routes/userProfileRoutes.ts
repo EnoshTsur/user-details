@@ -1,49 +1,60 @@
 import { Request, Response, Router } from "express";
-import UserProfile from "../model/userProfile";
-import jwt, { JwtPayload } from "jsonwebtoken";
+import UserProfile, { UserBasicInfo } from "../model/userProfile";
+import {
+  calculateBMR,
+  calculateMacros,
+  calculateTDEE,
+} from "../service/userProfile.service";
+import { authMiddleware } from "./auth.middleware";
 
 const profileRouter = Router();
 
-profileRouter.post("/new", async (req: Request, res: Response) => {
-  const authHeader = req.headers.authorization;
-
-  if (!authHeader || !authHeader.startsWith("Bearer ")) {
-    return res
-      .status(401)
-      .json({ error: "Unauthorized: Missing or invalid token" });
-  }
+profileRouter.get("/get", authMiddleware, async (_: Request, res: Response) => {
+  const { userId } = res.locals;
 
   try {
-    const token = authHeader.substring("Bearer ".length);
+    const user = await UserProfile.findById(userId);
+    if (!user) {
+      return res.status(400).send({ message: 'There is no user profile matching this token '});
+    }
+    return res.status(200).json(user);
+  } catch (error) {
+    return res.status(500).json({ message: `Error finding user: ${error}` });
+  }
+});
 
-    const decodedToken = jwt.verify(
-      token,
-      process.env.JWT_KEY ?? ""
-    ) as JwtPayload;
+profileRouter.post("/new", authMiddleware, async (req: Request, res: Response) => {
+  try {
+    const { userId } = res.locals;
 
-    const { userId } = decodedToken;
+    const userBasicInfo: UserBasicInfo = req.body;
 
-    console.log({ decodedToken, userId, token });
+    const bmr = calculateBMR(userBasicInfo);
 
-    const { height, weight, gender, age, activityLevel, bmr, tdee } = req.body;
+    const tdee = calculateTDEE(userBasicInfo);
 
-    const userProfile = new UserProfile({
+    const userProfile = {
       _id: userId,
-      height,
-      weight,
-      gender,
-      age,
-      activityLevel,
-      bmr, 
+      ...userBasicInfo,
+      bmr,
       tdee,
-    });
+    };
 
     // Save UserProfile to MongoDB
-    await userProfile.save();
+    await UserProfile.findOneAndUpdate({ _id: userId }, userProfile, {
+      new: true,
+      upsert: true,
+      runValidators: true,
+    });
 
-    res
-      .status(201)
-      .json({ message: "UserProfile saved successfully", userProfile });
+    res.status(201).json({
+      message: "UserProfile saved successfully",
+      userProfile,
+      macros: {
+        cut: calculateMacros(tdee, bmr, userProfile.weight, "cut"),
+        bulk: calculateMacros(tdee, bmr, userProfile.weight, "bulk"),
+      },
+    });
   } catch (err) {
     console.error("Error saving UserProfile:", err);
     res.status(500).json({ error: "Failed to save UserProfile" });
