@@ -1,5 +1,5 @@
 import express from 'express'
-import connectDB from './databas'
+import connectDB from './database'
 import authRouter from './routes/userAuthRoutes'
 import cors from 'cors'
 import dotenv from 'dotenv';
