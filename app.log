@@ -1,0 +1,95 @@
+2024-06-20T07:47:12.999Z [[31merror[39m]; [AuthMiddleware]: Invalid token
+2024-06-20T07:47:13.004Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:47:13 +0000] "GET /api/auth/users/validateToken HTTP/1.1" 401 59 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:47:13.007Z [[31merror[39m]; [AuthMiddleware]: Invalid token
+2024-06-20T07:47:13.009Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:47:13 +0000] "GET /api/auth/users/validateToken HTTP/1.1" 401 59 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:47:13.011Z [[31merror[39m]; [AuthMiddleware]: Invalid token
+2024-06-20T07:47:13.012Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:47:13 +0000] "GET /api/profile/users/get HTTP/1.1" 401 59 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:47:13.014Z [[31merror[39m]; [AuthMiddleware]: Invalid token
+2024-06-20T07:47:13.015Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:47:13 +0000] "GET /api/profile/users/get HTTP/1.1" 401 59 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:47:14.017Z [[31merror[39m]; [AuthMiddleware]: Invalid token
+2024-06-20T07:47:14.018Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:47:14 +0000] "GET /api/auth/users/validateToken HTTP/1.1" 401 59 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:47:14.029Z [[31merror[39m]; [AuthMiddleware]: Invalid token
+2024-06-20T07:47:14.030Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:47:14 +0000] "GET /api/profile/users/get HTTP/1.1" 401 59 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:47:16.028Z [[31merror[39m]; [AuthMiddleware]: Invalid token
+2024-06-20T07:47:16.031Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:47:16 +0000] "GET /api/auth/users/validateToken HTTP/1.1" 401 59 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:47:16.040Z [[31merror[39m]; [AuthMiddleware]: Invalid token
+2024-06-20T07:47:16.043Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:47:16 +0000] "GET /api/profile/users/get HTTP/1.1" 401 59 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:47:22.361Z [[31merror[39m]; [AuthMiddleware]: Invalid token
+2024-06-20T07:47:22.364Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:47:22 +0000] "GET /api/auth/users/validateToken HTTP/1.1" 401 59 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:47:22.366Z [[31merror[39m]; [AuthMiddleware]: Invalid token
+2024-06-20T07:47:22.368Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:47:22 +0000] "GET /api/profile/users/get HTTP/1.1" 401 59 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:47:49.937Z [[32minfo[39m]; [Auth-Register] Request for user registration for email:adir@golan.com
+2024-06-20T07:47:50.199Z [[32minfo[39m]; [Auth-Register] User saved successfully on mongodb server:{"email":"adir@golan.com","password":"$2b$10$eBezn6Bv5giz4CB7JaGRSuQqwSNkX9fs/eI5qTBqPRYwDDAUDPHJa","_id":"6673dea650d623e27095ba07","__v":0}
+2024-06-20T07:47:50.205Z [[32minfo[39m]; [Auth-Register] Token generated successfully:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjczZGVhNjUwZDYyM2UyNzA5NWJhMDciLCJpYXQiOjE3MTg4Njk2NzAsImV4cCI6MTcxODg4NzY3MH0.tevpfri3MXJ91c0dM88-ZZAVVjbF-XzzScgeD6rsfsg
+2024-06-20T07:47:50.208Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:47:50 +0000] "POST /api/auth/users/register HTTP/1.1" 200 188 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:49:00.898Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:49:00.899Z [[32minfo[39m]; [Auth-TokenValidation] Request token is valid
+2024-06-20T07:49:00.900Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:49:00 +0000] "GET /api/auth/users/validateToken HTTP/1.1" 200 16 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:49:00.901Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:49:00.913Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:49:00.918Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:49:00.919Z [[32minfo[39m]; [Auth-TokenValidation] Request token is valid
+2024-06-20T07:49:00.920Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:49:00 +0000] "GET /api/auth/users/validateToken HTTP/1.1" 200 16 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:49:01.056Z [[31merror[39m]; [UserProfile-Get]: User doesnt exists according to request token
+2024-06-20T07:49:01.057Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:49:01 +0000] "GET /api/profile/users/get HTTP/1.1" 400 59 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:49:01.058Z [[31merror[39m]; [UserProfile-Get]: User doesnt exists according to request token
+2024-06-20T07:49:01.059Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:49:01 +0000] "GET /api/profile/users/get HTTP/1.1" 400 59 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:49:02.070Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:49:02.235Z [[31merror[39m]; [UserProfile-Get]: User doesnt exists according to request token
+2024-06-20T07:49:02.239Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:49:02 +0000] "GET /api/profile/users/get HTTP/1.1" 400 59 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:49:14.133Z [[32minfo[39m]; [Auth-Login] Token generated
+2024-06-20T07:49:14.134Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:49:14 +0000] "POST /api/auth/users/login HTTP/1.1" 200 188 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:49:29.104Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:49:29.105Z [[32minfo[39m]; [Auth-TokenValidation] Request token is valid
+2024-06-20T07:49:29.106Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:49:29 +0000] "GET /api/auth/users/validateToken HTTP/1.1" 200 16 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:49:29.107Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:49:29.107Z [[32minfo[39m]; [Auth-TokenValidation] Request token is valid
+2024-06-20T07:49:29.108Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:49:29 +0000] "GET /api/auth/users/validateToken HTTP/1.1" 200 16 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:49:29.109Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:49:29.112Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:49:29.267Z [[31merror[39m]; [UserProfile-Get]: User doesnt exists according to request token
+2024-06-20T07:49:29.268Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:49:29 +0000] "GET /api/profile/users/get HTTP/1.1" 400 59 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:49:29.270Z [[31merror[39m]; [UserProfile-Get]: User doesnt exists according to request token
+2024-06-20T07:49:29.271Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:49:29 +0000] "GET /api/profile/users/get HTTP/1.1" 400 59 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:49:30.281Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:49:30.446Z [[31merror[39m]; [UserProfile-Get]: User doesnt exists according to request token
+2024-06-20T07:49:30.449Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:49:30 +0000] "GET /api/profile/users/get HTTP/1.1" 400 59 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:49:56.662Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:49:56.870Z [[32minfo[39m]; [UserProfile-New]: New user profile created
+2024-06-20T07:49:56.873Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:49:56 +0000] "POST /api/profile/users/new HTTP/1.1" 201 373 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:51:07.984Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:51:07.985Z [[32minfo[39m]; [Auth-TokenValidation] Request token is valid
+2024-06-20T07:51:07.986Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:51:07 +0000] "GET /api/auth/users/validateToken HTTP/1.1" 200 16 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:51:07.989Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:51:07.989Z [[32minfo[39m]; [Auth-TokenValidation] Request token is valid
+2024-06-20T07:51:07.991Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:51:07 +0000] "GET /api/auth/users/validateToken HTTP/1.1" 200 16 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:51:07.994Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:51:08.000Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:51:08.191Z [[32minfo[39m]; [UserProfile-Get]: User profile exists: {"_id":"6673dea650d623e27095ba07","__v":0,"activityLevel":1.375,"age":18,"bmr":1862.5,"gender":"male","height":190,"tdee":2560.9375,"weight":76}
+2024-06-20T07:51:08.194Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:51:08 +0000] "GET /api/profile/users/get HTTP/1.1" 200 144 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:51:08.198Z [[32minfo[39m]; [UserProfile-Get]: User profile exists: {"_id":"6673dea650d623e27095ba07","__v":0,"activityLevel":1.375,"age":18,"bmr":1862.5,"gender":"male","height":190,"tdee":2560.9375,"weight":76}
+2024-06-20T07:51:08.202Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:51:08 +0000] "GET /api/profile/users/get HTTP/1.1" 200 144 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:57:29.386Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:57:29.387Z [[32minfo[39m]; [Auth-TokenValidation] Request token is valid
+2024-06-20T07:57:29.388Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:57:29 +0000] "GET /api/auth/users/validateToken HTTP/1.1" 200 16 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:57:29.390Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:57:29.390Z [[32minfo[39m]; [Auth-TokenValidation] Request token is valid
+2024-06-20T07:57:29.391Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:57:29 +0000] "GET /api/auth/users/validateToken HTTP/1.1" 200 16 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:57:29.392Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:57:29.396Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:57:29.581Z [[32minfo[39m]; [UserProfile-Get]: User profile exists: {"_id":"6673dea650d623e27095ba07","__v":0,"activityLevel":1.375,"age":18,"bmr":1862.5,"gender":"male","height":190,"tdee":2560.9375,"weight":76}
+2024-06-20T07:57:29.582Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:57:29 +0000] "GET /api/profile/users/get HTTP/1.1" 200 144 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:57:29.585Z [[32minfo[39m]; [UserProfile-Get]: User profile exists: {"_id":"6673dea650d623e27095ba07","__v":0,"activityLevel":1.375,"age":18,"bmr":1862.5,"gender":"male","height":190,"tdee":2560.9375,"weight":76}
+2024-06-20T07:57:29.586Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:57:29 +0000] "GET /api/profile/users/get HTTP/1.1" 200 144 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:58:27.069Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:58:27.069Z [[32minfo[39m]; [Auth-TokenValidation] Request token is valid
+2024-06-20T07:58:27.070Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:58:27 +0000] "GET /api/auth/users/validateToken HTTP/1.1" 200 16 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:58:27.071Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:58:27.072Z [[32minfo[39m]; [Auth-TokenValidation] Request token is valid
+2024-06-20T07:58:27.073Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:58:27 +0000] "GET /api/auth/users/validateToken HTTP/1.1" 200 16 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:58:27.080Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:58:27.084Z [[32minfo[39m]; [AuthMiddleware]: Valid token
+2024-06-20T07:58:27.283Z [[32minfo[39m]; [UserProfile-Get]: User profile exists: {"_id":"6673dea650d623e27095ba07","__v":0,"activityLevel":1.375,"age":18,"bmr":1862.5,"gender":"male","height":190,"tdee":2560.9375,"weight":76}
+2024-06-20T07:58:27.284Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:58:27 +0000] "GET /api/profile/users/get HTTP/1.1" 200 144 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2024-06-20T07:58:27.285Z [[32minfo[39m]; [UserProfile-Get]: User profile exists: {"_id":"6673dea650d623e27095ba07","__v":0,"activityLevel":1.375,"age":18,"bmr":1862.5,"gender":"male","height":190,"tdee":2560.9375,"weight":76}
+2024-06-20T07:58:27.285Z [[32minfo[39m]; ::1 - - [20/Jun/2024:07:58:27 +0000] "GET /api/profile/users/get HTTP/1.1" 200 144 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"

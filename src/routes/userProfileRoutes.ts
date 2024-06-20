@@ -6,6 +6,7 @@ import {
   calculateTDEE,
 } from "../service/userProfile.service";
 import { authMiddleware } from "./auth.middleware";
+import logger from "../logger/logger";
 
 const profileRouter = Router();
 
@@ -15,10 +16,16 @@ profileRouter.get("/get", authMiddleware, async (_: Request, res: Response) => {
   try {
     const user = await UserProfile.findById(userId);
     if (!user) {
+      logger.error('[UserProfile-Get]: User doesnt exists according to request token')
+
       return res.status(400).send({ message: 'There is no user profile matching this token '});
     }
+    logger.info(`[UserProfile-Get]: User profile exists: ${JSON.stringify(user)}`)
+
     return res.status(200).json(user);
   } catch (error) {
+    logger.error(`[UserProfile-Get]: Error finding user ${error}`)
+
     return res.status(500).json({ message: `Error finding user: ${error}` });
   }
 });
@@ -47,6 +54,9 @@ profileRouter.post("/new", authMiddleware, async (req: Request, res: Response) =
       runValidators: true,
     });
 
+    logger.info(`[UserProfile-New]: New user profile created`)
+
+
     res.status(201).json({
       message: "UserProfile saved successfully",
       userProfile,
@@ -56,7 +66,8 @@ profileRouter.post("/new", authMiddleware, async (req: Request, res: Response) =
       },
     });
   } catch (err) {
-    console.error("Error saving UserProfile:", err);
+    logger.error(`[UserProfile-New]: Error saving user profile ${err}`)
+
     res.status(500).json({ error: "Failed to save UserProfile" });
   }
 });
