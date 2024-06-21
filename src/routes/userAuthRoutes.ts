@@ -17,17 +17,17 @@ authRouter.get(
 
 authRouter.post("/register", async (req: Request, res: Response) => {
   const userAuth: IUserAuth = req.body;
-  const { statusCode, message, token, error } = await registerUser(userAuth);
+  const { statusCode, body, actionCode, error } = await registerUser(userAuth);
 
-  return res.status(statusCode).json({ message, token, error });
+  return res.status(statusCode).json({ body, actionCode, error });
 });
 
 authRouter.post("/login", async (req: Request, res: Response) => {
   const userAuth: IUserAuth = req.body;
 
-  const { statusCode, error, token } = await userLogin(userAuth);
+  const { statusCode, error, body, actionCode } = await userLogin(userAuth);
 
-  return res.status(statusCode).json({ error, token });
+  return res.status(statusCode).json({ error, body, actionCode });
 });
 
 export default authRouter;
