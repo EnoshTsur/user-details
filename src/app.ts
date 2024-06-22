@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import connectDB from "./database";
 import authRouter from "./routes/userAuthRoutes";
 import cors from "cors";
@@ -23,6 +23,12 @@ app.use(
 app.use("/api/auth/users", authRouter);
 app.use("/api/profile/users", profileRouter);
 
+app.get('/health', async (_: Request, res: Response) => {
+  return res.status(200).json({ health: 'ok'})
+})
+
 app.listen(PORT, async () => {
+  console.log('running on port', PORT);
+  
   await connectDB();
 });
